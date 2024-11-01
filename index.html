@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar ala Netflix -->
+    <header class="navbar">
+        <div class="logo netflix-logo">
+        <img src="netflix-logo.png" alt="Netflix Logo" class="netflix-logo-img">
+        </div>
+
+        <nav>
+            <a href="#">Homepage</a>
+            <a href="#">Series</a>
+            <a href="#">Movies</a>
+            <a href="#">New and Popular</a>
+            <a href="#">My List</a>
+        </nav>
+    </header>
+    
+    <!-- Hero Section ala Netflix -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>How To Say Happy Birthday From me</h1>
+            <p>This is how me give happy birthday. In the meantime, you will understand how my brain works. As you see this, Artha wants to say Happy Birthday to you.</p>
+            <p>Click 'Play' to see the details</p>
+            <div class="buttons">
+                <button class="play-btn">Play</button>
+                <button class="info-btn">Info</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popupModal" class="modal">
+      <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Happy Birthday, Wina!</h2>
+          <img src="popup_image.jpg" alt="Birthday Image" class="popup-image">
+          <p>I was thinking about what I should write for your birthday, and there are some things I want to share with you. Sorry I couldn't give you a better one, but I hope this is memorable for you. this is for your sweet seventeen, Happy birthday WYATB</p>
+       </div>
+    </div>
+
+
+    <!-- JavaScript untuk Modal -->
+    <script>
+        // Mengambil elemen modal dan tombol
+        const modal = document.getElementById("popupModal");
+        const playBtn = document.querySelector(".play-btn");
+        const closeBtn = document.querySelector(".close-btn");
+
+        // Fungsi untuk menampilkan modal
+        playBtn.onclick = function() {
+            modal.style.display = "flex";
+        };
+
+        // Fungsi untuk menutup modal ketika tombol "close" diklik
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Fungsi untuk menutup modal ketika area di luar modal diklik
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
+<section class="gallery">
+    <h2>Line One</h2>
+    <div class="gallery-row">
+        <img src="before1.jpg" alt="Widya Before 1">
+        <img src="before2.jpg" alt="Widya Before 2">
+        <img src="before3.jpg" alt="Widya Before 3">
+        <img src="before4.jpg" alt="Widya Before 4">
+		<img src="before5.jpg" alt="Widya Before 5">
+        <img src="before6.jpg" alt="Widya Before 6">
+        <img src="before7.jpg" alt="Widya Before 7">
+    </div>
+
+    <h2>Line Two</h2>
+    <div class="gallery-row">
+        <img src="after1.jpg" alt="Widya After 1">
+        <img src="after2.jpg" alt="Widya After 2">
+        <img src="after3.jpg" alt="Widya After 3">
+        <img src="after4.jpg" alt="Widya After 4">
+		<img src="after5.jpg" alt="Widya After 5">
+        <img src="after6.jpg" alt="Widya After 6">
+        <img src="after7.jpg" alt="Widya After 7">
+    </div>
+</section>
+<script>
+    // Mengambil elemen navbar
+    const navbar = document.querySelector('.navbar');
+
+    // Fungsi untuk menambahkan atau menghapus kelas berdasarkan posisi scroll
+    window.onscroll = function() {
+        if (window.scrollY > 0) {
+            navbar.classList.add('scrolled'); // Menambah background hitam
+            navbar.classList.remove('shadow'); // Menghapus bayangan
+        } else {
+            navbar.classList.remove('scrolled'); // Menghapus background hitam
+            navbar.classList.add('shadow'); // Menambah bayangan
+        }
+    };
+</script>
